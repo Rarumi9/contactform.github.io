@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>第33回お問い合わせフォーム</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrap">
+	<header>
+		<div class="inner">
+			<h1>Site title</h1>
+		</div>
+	</header>
+	<nav >
+		グローバルナビゲーションが入ります。
+	</nav>
+	<main class="inner">
+		<h2>お問い合わせフォーム</h2>
+		<p><span class="required">※</span>印は必須項目です。</p>
+		<form id="contact_form" action="confirm.php" method="post">
+			<dl id="form">
+				
+				<label>
+					<dt>
+						お名前<span class="required">※</span>
+					</dt>
+					<dd>
+						<input type="text" name="name" class="name" id="name" placeholder="山田 太郎" required>
+					</dd>
+				</label>
+				
+				<label>
+					<dt>
+						ふりがな<span class="required">※</span>
+					</dt>
+					<dd>
+						<input type="text" name="kana" class="kana" id="kana" placeholder="やまだ たろう" required>
+					</dd>
+				</label>
+				
+				<label for="zip1">
+					<dt>
+						郵便番号
+					</dt>
+					<dd>
+						<input type="tel" name="zip1" class="zip1" id="zip1" maxlength="3">
+						&nbsp;-&nbsp;
+						<input type="tel" name="zip2" class="zip2" id="zip2" maxlength="4">
+					</dd>
+				</label>
+				
+				<label for="address">
+					<dt>
+						住所
+					</dt>
+					<dd>
+						<div class="address_box">
+							<select name="pref" id="pref">
+								<option selected="selected">選択してください</option>
+								<option value="北海道">北海道</option>
+								<option value="青森県">青森県</option>
+								<option value="岩手県">岩手県</option>
+								<option value="宮城県">宮城県</option>
+								<option value="秋田県">秋田県</option>
+								<option value="山形県">山形県</option>
+								<option value="福島県">福島県</option>
+								<option value="茨城県">茨城県</option>
+								<option value="栃木県">栃木県</option>
+								<option value="群馬県">群馬県</option>
+								<option value="埼玉県">埼玉県</option>
+								<option value="千葉県">千葉県</option>
+								<option value="東京都">東京都</option>
+								<option value="神奈川県">神奈川県</option>
+								<option value="新潟県">新潟県</option>
+								<option value="富山県">富山県</option>
+								<option value="石川県">石川県</option>
+								<option value="福井県">福井県</option>
+								<option value="山梨県">山梨県</option>
+								<option value="長野県">長野県</option>
+								<option value="岐阜県">岐阜県</option>
+								<option value="静岡県">静岡県</option>
+								<option value="愛知県">愛知県</option>
+								<option value="三重県">三重県</option>
+								<option value="滋賀県">滋賀県</option>
+								<option value="京都府">京都府</option>
+								<option value="大阪府">大阪府</option>
+								<option value="兵庫県">兵庫県</option>
+								<option value="奈良県">奈良県</option>
+								<option value="和歌山県">和歌山県</option>
+								<option value="鳥取県">鳥取県</option>
+								<option value="島根県">島根県</option>
+								<option value="岡山県">岡山県</option>
+								<option value="広島県">広島県</option>
+								<option value="山口県">山口県</option>
+								<option value="徳島県">徳島県</option>
+								<option value="香川県">香川県</option>
+								<option value="愛媛県">愛媛県</option>
+								<option value="高知県">高知県</option>
+								<option value="福岡県">福岡県</option>
+								<option value="佐賀県">佐賀県</option>
+								<option value="長崎県">長崎県</option>
+								<option value="熊本県">熊本県</option>
+								<option value="大分県">大分県</option>
+								<option value="宮崎県">宮崎県</option>
+								<option value="鹿児島県">鹿児島県</option>
+								<option value="沖縄県">沖縄県</option>
+							</select>
+							<input type="text" name="address" class="address" id="address">
+						</div>
+					</dd>
+				</label>
+				
+				<label>
+					<dt>
+						電話番号
+					</dt>
+					<dd>
+						<input type="tel" name="tel" class="tel" id="tel">
+					</dd>
+				</label>
+				
+				<label>
+					<dt>
+						メールアドレス<span class="required">※</span>
+					</dt>
+					<dd>
+						<input type="email" name="email" class="email" id="email1" required>
+					</dd>
+				</label>
+				
+				<label>
+					<dt>
+						メールアドレス（確認用）<span class="required">※</span>
+					</dt>
+					<dd>
+						<input type="email" name="email2" class="email" id="email2" required>
+					</dd>
+				</label>
+				
+				<label>
+					<dt>
+						パスワード（8〜20文字以内）<span class="required">※</span>
+					</dt>
+					<dd>
+						<input type="password" name="pass" class="pass" id="pass1" required>
+					</dd>
+				</label>
+				
+				<label>
+					<dt>
+						パスワード（確認用）<span class="required">※</span>
+					</dt>
+					<dd>
+						<input type="password" name="pass2" class="pass" id="pass2" required>
+					</dd>
+				</label>
+				
+				<dt>
+					問い合わせ店舗<span class="required">※</span>
+				</dt>
+				<dd>
+					<input type="radio" name="shop" id="shop1" value="渋谷店" required>
+					<label for="shop1">渋谷店</label>
+					<input type="radio" name="shop" id="shop2" value="代々木店" required>
+					<label for="shop2">代々木店</label>
+					<input type="radio" name="shop" id="shop3" value="その他" required>
+					<label for="shop3">その他</label>
+				</dd>
+				<label class="check_block">
+					<dt>店舗名（その他を選んだ場合）</dt>
+					<dd>
+						<input type="text" name="shopname" id="shopname" required>
+					</dd>
+				</label>
+				
+				<dt>
+					ご希望の資料
+				</dt>
+				<dd>
+					<input type="checkbox" name="catalog[]" id="catalog1" value="資料1">
+					<label for="catalog1">資料1</label>
+					<input type="checkbox" name="catalog[]" id="catalog2" value="資料2">
+					<label for="catalog2">資料2</label>
+					<input type="checkbox" name="catalog[]" id="catalog3" value="資料3">
+					<label for="catalog3">資料3</label>
+					<input type="checkbox" name="catalog[]" id="catalog4" value="資料4">
+					<label for="catalog4">資料4</label>
+					<input type="checkbox" name="catalog[]" id="catalog5" value="資料5">
+					<label for="catalog5">資料5</label>
+				</dd>
+				<label>
+					<dt>
+						お問い合わせ内容<span class="required">※</span>
+					</dt>
+					<dd>
+						<textarea name="comment" id="comment" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+					</dd>
+				</label>
+			</dl>
+			<input type="submit" value="送信内容確認" id="submit">
+		</form>
+	</main>
+	<footer>
+		<small>&copy;Copyright 2021 TDP All rights reserved.</small>
+	</footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.zip2addr.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/messages_ja.js"></script>
+<script>
+$(function(){
+	$('#zip1').zip2addr({
+		zip2:'#zip2',
+		pref:'#pref',
+		addr:'#address'
+	})
+	$("#contact_form").validate({
+		errorPlacement: function(error, element) {
+			if(element.is(':radio, :checkbox')) {
+				error.appendTo(element.parent());
+			} else {
+				error.insertAfter(element);
+			}
+		},
+	//E-mailの確認用
+		rules : {
+			email2: {
+				equalTo: "#email1"
+			},
+			pass2: {
+				equalTo: "#pass1"
+			},
+			pass: {
+				minlength: 8,
+				maxlength: 20
+			},
+			shopname: {
+				required: "#shop3:checked"
+			}
+		}
+	});
+});
+$(document).on('click',function(){
+	if ($('#shop3').prop('checked') )
+		$(".check_block").addClass('on_block');
+	else
+		$(".check_block").removeClass('on_block');
+});
+</script>
+</body>
+</html>
